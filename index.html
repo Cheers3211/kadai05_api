@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>おでかけ日和 Tokyo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>おでかけ日和 Tokyo</h1>
+
+  <div id="weather">天気を取得中…</div>
+
+  <div id="mood-section" style="display:none;">
+    <h2>今日の気分は？</h2>
+    <button onclick="selectMood('のんびり')">のんびり</button>
+    <button onclick="selectMood('アクティブ')">アクティブ</button>
+    <button onclick="selectMood('カフェでまったり')">カフェでまったり</button>
+  </div>
+
+  <div id="map"></div>
+  <div id="recommendation" style="display:none; margin-top: 1em;">
+    <h2>おすすめスポット</h2>
+    <p id="recommendation-text"></p>
+    <img id="recommendation-image" src="" alt="" style="max-width: 100%; height: auto;">
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
